@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Валерия Моисеенко](https://up.htmlacademy.ru/htmlcss/32/user/1761057).
-* Наставник: `Неизвестно`.
+* Наставник: [Максим Корелин](https://htmlacademy.ru/profile/maxzbest).
 
 ---
 
