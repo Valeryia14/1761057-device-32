@@ -1,0 +1,141 @@
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts\rubik\rubik-400.woff2") format("woff2"),
+       url("fonts\rubik\rubik-400.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts\rubik\rubik-700.woff2") format("woff2"),
+       url("fonts\rubik\rubik-700.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 800;
+  src: url("fonts\rubik\rubik-800.woff2") format("woff2"),
+       url("fonts\rubik\rubik-800.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  src: url("fonts\raleway\raleway-800.woff2") format("woff2"),
+       url("fonts\raleway\raleway-800.woff") format("woff");
+  font-display: swap;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  background: #FFFFFF;
+}
+
+/*Header*/
+.header {
+  color: #000000;
+  background: #FFE17F;
+}
+
+.link {
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+}
+
+.user_link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.menu_link {
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+/*Product_offers*/
+.product_offers_link {
+  font-weight: 800;
+  line-height: 24px;
+}
+
+/* Ничего не изменилось, поэтому дальше не задавала отдельные классы. В чем ошибка?
+.bg_virtual_reality {
+  background-color: #FFE17F;
+  background-size: 160px;
+  background-image: url("img\advantages_icon\virtual_reality.svg");
+}
+*/
+
+/*Service*/
+.service {
+  background: #F0F0F0;
+}
+
+.service_link {
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.delivery_exclusion {
+  background: #F0F0F0;
+}
+
+/*Sign*/
+.sign {
+  background: #F0F0F0;
+}
+
+/*Footer*/
+.main_footer {
+  color: #FFFFFF;;
+  background: #444444;
+}
+
+.footer_link {
+  color: #FFFFFF;
+  line-height: 21px;
+}
+
+/*CATALOG*/
+.inner_way_link {
+  color: #000000;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.catalog_products {
+  background: #E5E5E5;
+}
+
+.sorting_type {
+  background: #E5E5E5;
+}
+
+.pagination_cards {
+  background: #E5E5E5;
+}
+
+.product_card_link {
+  color: #000000;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: none;
+}
+
+
