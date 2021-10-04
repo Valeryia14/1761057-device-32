@@ -2,8 +2,8 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
-  src: url("fonts\rubik\rubik-400.woff2") format("woff2"),
-       url("fonts\rubik\rubik-400.woff") format("woff");
+  src: url("fonts/rubik/rubik-400.woff2") format("woff2"),
+       url("fonts/rubik/rubik-400.woff") format("woff");
   font-display: swap;
 }
 
@@ -11,8 +11,8 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
-  src: url("fonts\rubik\rubik-700.woff2") format("woff2"),
-       url("fonts\rubik\rubik-700.woff") format("woff");
+  src: url("fonts/rubik/rubik-700.woff2") format("woff2"),
+       url("fonts/rubik/rubik-700.woff") format("woff");
   font-display: swap;
 }
 
@@ -20,8 +20,8 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 800;
-  src: url("fonts\rubik\rubik-800.woff2") format("woff2"),
-       url("fonts\rubik\rubik-800.woff") format("woff");
+  src: url("fonts/rubik/rubik-800.woff2") format("woff2"),
+       url("fonts/rubik/rubik-800.woff") format("woff");
   font-display: swap;
 }
 
@@ -29,8 +29,8 @@
   font-family: "Raleway";
   font-style: normal;
   font-weight: 800;
-  src: url("fonts\raleway\raleway-800.woff2") format("woff2"),
-       url("fonts\raleway\raleway-800.woff") format("woff");
+  src: url("fonts/raleway/raleway-800.woff2") format("woff2"),
+       url("fonts/raleway/raleway-800.woff") format("woff");
   font-display: swap;
 }
 
@@ -42,10 +42,34 @@ body {
   background: #FFFFFF;
 }
 
+h2 {
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+  font-weight: 800;
+  font-size: 50x;
+  line-height: 50px;
+}
+
+h3 {
+  color: #000000;
+  font-weight: 700;
+  font-size: 24px;
+}
+
 /*Header*/
 .header {
   color: #000000;
   background: #FFE17F;
+}
+
+.header_form {
+  background: url('../img/nav_icon/search.svg') no-repeat;
+}
+
+.header_input {
+  font-size: 16px;
+  line-height: 19px;
+  margin-left: 25px; /*Указано условно*/
 }
 
 .link {
@@ -54,6 +78,12 @@ body {
   font-weight: 800;
   text-align: center;
   text-decoration: none;
+}
+
+.all_link {
+  line-height: 21px;
+  background-color: #FFE17F;
+  text-transform: uppercase;
 }
 
 .user_link {
@@ -67,37 +97,142 @@ body {
   text-transform: uppercase;
 }
 
+.header_span {
+  font-size: 14px;
+  line-height: 16.6px;
+  text-align: center;
+}
+
+/*Main_page Description*/
+.description_compare {
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.characteristic_term{
+  color: #000000;
+  font-size: 36px;
+  line-height: 30px;
+}
+
+.characteristic_description {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+
 /*Product_offers*/
+.product_offers_item {
+  height: 160px;
+  background: #FFE17F no-repeat;
+}
+
+.bg_virtual_reality {
+  background-image: url('../img/advantages_icon/virtual_reality.svg');
+}
+
+.bg_monopod {
+  background-image: url('../img/advantages_icon/monopod.svg');
+}
+
+.bg_camera{
+  background-image: url('../img/advantages_icon/camera.svg');
+}
+
+.bg_fitness_watch{
+  background-image: url('../img/advantages_icon/fitness_watch.svg');
+}
+
+.bg_smart_watch{
+  background-image: url('../img/advantages_icon/smart_watch.svg');
+}
+
+.bg_drone{
+  background-image: url('../img/advantages_icon/drone.svg');
+}
+
 .product_offers_link {
   font-weight: 800;
   line-height: 24px;
 }
-
-/* Ничего не изменилось, поэтому дальше не задавала отдельные классы. В чем ошибка?
-.bg_virtual_reality {
-  background-color: #FFE17F;
-  background-size: 160px;
-  background-image: url("img\advantages_icon\virtual_reality.svg");
-}
-*/
 
 /*Service*/
 .service {
   background: #F0F0F0;
 }
 
+.bg_delivery{
+  background: url('../img/fast_delivery.svg') no-repeat 200px; /*200px указано условно, чтобы видеть bg*/
+}
+
+.bg_guarantee {
+  background: url('../img/warranty.svg') no-repeat 200px;
+}
+
+.bg_credit {
+  background: url('../img/credit.svg') no-repeat 200px;
+}
+
 .service_link {
-  line-height: 24px;
+  line-height: 21px;
   text-transform: uppercase;
+}
+
+.bg_service_link {
+  background-color: #FFC700;
+}
+
+.mark_out {
+  color: #FFE17F;
+  background: #000000;
+  text-align: center;
+  line-height: 21px;
 }
 
 .delivery_exclusion {
   background: #F0F0F0;
 }
 
+.delivery_exclusion_text {
+    font-family: "Raleway", sans-serif;
+    color: #000000;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 23,5px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px; /*В макете 20%. Как перевести в px?*/
+}
+
+/*Information*/
+.info_about_iteam {
+  color: #000000;
+  font-weight: 700;
+  line-height: 20px;
+}
+
 /*Sign*/
 .sign {
   background: #F0F0F0;
+}
+
+.button {
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.contacts_address {
+  font-style: normal;
+}
+
+.contacts_phone {
+  color: #444444;
 }
 
 /*Footer*/
@@ -111,31 +246,140 @@ body {
   line-height: 21px;
 }
 
+.footer_address {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.soc_icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    opacity: 0.3;
+    color: #444444;
+}
+
+.facebook {
+  background: #fff url('../img/facebook.svg') no-repeat center;
+}
+
+.instagram {
+  background: #fff url('../img/instagram.svg') no-repeat center;
+}
+
+.twitter {
+  background: #fff url('../img/twitter.svg') no-repeat center;
+}
+
+
+.footer_contacts_phone {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-style: normal;
+  text-decoration: none;
+}
+
 /*CATALOG*/
 .inner_way_link {
   color: #000000;
-  font-weight: 700;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 19px;
   text-decoration: none;
+  opacity: 0.6;
 }
 
 .catalog_products {
   background: #E5E5E5;
 }
 
+.product_labe {
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.filter_legend {
+  font-family: "Rubik", sans-serif;
+  color: #000000;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.filter_price_label {
+  font-size: 15px;
+  line-height: 18px;
+  opacity: 0.3;
+}
+
+.example {
+  color: #000000;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.filter_button {
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  line-height: 21px;
+  background-color: #FFE17F;
+  text-transform: uppercase;
+}
+
+/*Sorting*/
 .sorting_type {
   background: #E5E5E5;
+}
+
+.product_card_price {
+  color: #444444;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.product_card_new {
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 16.5px;
+  opacity: 0.6;
+}
+
+.product_card_link  {
+  text-decoration: none;
+}
+
+.cards_show_more {
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  background-color: #FFFFFF;
 }
 
 .pagination_cards {
   background: #E5E5E5;
 }
 
-.product_card_link {
+.cards_number_page {
+  font-family: "Raleway", sans-serif;
   color: #000000;
+  font-weight: 800;
   font-size: 16px;
   line-height: 19px;
-  text-decoration: none;
+  text-transform: uppercase;
 }
 
-
+.pagination_number {
+  font-size: 16px;
+  line-height: 19px;
+  opacity: 0.3;
+}
