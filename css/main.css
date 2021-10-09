@@ -34,31 +34,43 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   line-height: 30px;
-  color: #444444;
-  background: #FFFFFF;
+  color: #444;
+  background: #FFF;
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 h2 {
   font-family: "Raleway", sans-serif;
-  color: #000000;
+  color: #000;
   font-weight: 800;
   font-size: 50x;
   line-height: 50px;
 }
 
 h3 {
-  color: #000000;
+  color: #000;
   font-weight: 700;
   font-size: 24px;
 }
 
 /*Header*/
 .header {
-  color: #000000;
+  color: #000;
   background: #FFE17F;
 }
 
@@ -72,9 +84,26 @@ h3 {
   margin-left: 25px; /*Указано условно*/
 }
 
+.header_nav {
+  display: flex;
+  flex-direction: column;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.header_nav_list {
+  margin: 0;
+  padding: 0;
+  width: 1075px;
+}
+
+.header_menu {
+  width: 1041px;
+}
+
 .link {
   font-family: "Raleway", sans-serif;
-  color: #000000;
+  color: #000;
   font-weight: 800;
   text-align: center;
   text-decoration: none;
@@ -92,6 +121,26 @@ h3 {
   line-height: 19px;
 }
 
+.page-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.main_page {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery{
+  width: 560px;
+}
+
+.description {
+  width: 560px;
+}
+
 .menu_link {
   line-height: 21px;
   text-transform: uppercase;
@@ -106,14 +155,14 @@ h3 {
 /*Main_page Description*/
 .description_compare {
   font-family: "Raleway", sans-serif;
-  color: #000000;
+  color: #000;
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
 }
 
 .characteristic_term{
-  color: #000000;
+  color: #000;
   font-size: 36px;
   line-height: 30px;
 }
@@ -125,6 +174,17 @@ h3 {
 
 
 /*Product_offers*/
+.product_offers_list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.product_offers_item {
+  width: 160px;
+}
+
 .product_offers_item {
   height: 160px;
   background: #FFE17F no-repeat;
@@ -164,16 +224,28 @@ h3 {
   background: #F0F0F0;
 }
 
+.scope {
+  display: flex;
+}
+
+.service_menu {
+  width: 280px;
+}
+
+.service_description {
+  width: 560px;
+}
+
 .bg_delivery{
-  background: url('../img/fast_delivery.svg') no-repeat 200px; /*200px указано условно, чтобы видеть bg*/
+  background: url('../img/fast_delivery.svg') no-repeat 850px; /*Указано условно*/
 }
 
 .bg_guarantee {
-  background: url('../img/warranty.svg') no-repeat 200px;
+  background: url('../img/warranty.svg') no-repeat 850px;
 }
 
 .bg_credit {
-  background: url('../img/credit.svg') no-repeat 200px;
+  background: url('../img/credit.svg') no-repeat 850px;
 }
 
 .service_link {
@@ -187,7 +259,7 @@ h3 {
 
 .mark_out {
   color: #FFE17F;
-  background: #000000;
+  background: #000;
   text-align: center;
   line-height: 21px;
 }
@@ -198,7 +270,7 @@ h3 {
 
 .delivery_exclusion_text {
     font-family: "Raleway", sans-serif;
-    color: #000000;
+    color: #000;
     font-weight: 800;
     font-size: 20px;
     line-height: 23,5px;
@@ -208,8 +280,23 @@ h3 {
 }
 
 /*Information*/
+.information {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.info_about {
+  width: 560px;
+}
+
+.info_contacts {
+  width: 560px;
+}
+
 .info_about_iteam {
-  color: #000000;
+  color: #000;
   font-weight: 700;
   line-height: 20px;
 }
@@ -219,12 +306,36 @@ h3 {
   background: #F0F0F0;
 }
 
+.sign_call {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.sign_title {
+  width: 560px;
+}
+
+.sign_text {
+  width: 560px;
+}
+
+.sign_action {
+  display: flex;
+}
+
+.sign_form {
+  width: 861px;
+}
+
 .button {
   font-family: "Raleway", sans-serif;
-  color: #000000;
+  color: #000;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
+  width: 260px;
 }
 
 .contacts_address {
@@ -232,17 +343,41 @@ h3 {
 }
 
 .contacts_phone {
-  color: #444444;
+  color: #444;
 }
 
 /*Footer*/
+.footer_container {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.h2_footer {
+  display: none;        /*Для удобства, временно*/
+}
+
 .main_footer {
-  color: #FFFFFF;;
-  background: #444444;
+  color: #FFF;;
+  background: #444;
+}
+
+.footer_info {
+  width: 238px;
+  margin-right: 148px;
+}
+
+.footer_menu {
+  width: 458px;
+}
+
+.footer_contacts {
+  width: 293px;
+  margin-left: auto;
 }
 
 .footer_link {
-  color: #FFFFFF;
+  color: #FFF;
   line-height: 21px;
 }
 
@@ -257,7 +392,7 @@ h3 {
     height: 16px;
     border-radius: 100%;
     opacity: 0.3;
-    color: #444444;
+    color: #444;
 }
 
 .facebook {
@@ -274,7 +409,7 @@ h3 {
 
 
 .footer_contacts_phone {
-  color: #FFFFFF;
+  color: #FFF;
   font-size: 16px;
   font-style: normal;
   text-decoration: none;
@@ -282,7 +417,7 @@ h3 {
 
 /*CATALOG*/
 .inner_way_link {
-  color: #000000;
+  color: #000;
   font-size: 16px;
   line-height: 19px;
   text-decoration: none;
@@ -295,7 +430,7 @@ h3 {
 
 .product_labe {
   font-family: "Raleway", sans-serif;
-  color: #000000;
+  color: #000;
   font-weight: 800;
   font-size: 16px;
   line-height: 19px;
@@ -303,7 +438,7 @@ h3 {
 
 .filter_legend {
   font-family: "Rubik", sans-serif;
-  color: #000000;
+  color: #000;
   font-weight: 700;
   line-height: 20px;
 }
@@ -315,14 +450,14 @@ h3 {
 }
 
 .example {
-  color: #000000;
+  color: #000;
   font-size: 16px;
   line-height: 19px;
 }
 
 .filter_button {
   font-family: "Raleway", sans-serif;
-  color: #000000;
+  color: #000;
   font-weight: 800;
   text-align: center;
   text-decoration: none;
@@ -337,14 +472,14 @@ h3 {
 }
 
 .product_card_price {
-  color: #444444;
+  color: #444;
   font-size: 18px;
   line-height: 21px;
 }
 
 .product_card_new {
   font-family: "Raleway", sans-serif;
-  color: #000000;
+  color: #000;
   font-weight: 800;
   font-size: 14px;
   line-height: 16.5px;
@@ -357,12 +492,12 @@ h3 {
 
 .cards_show_more {
   font-family: "Raleway", sans-serif;
-  color: #000000;
+  color: #000;
   font-weight: 800;
   font-size: 16px;
   line-height: 19px;
   text-transform: uppercase;
-  background-color: #FFFFFF;
+  background-color: #FFF;
 }
 
 .pagination_cards {
@@ -371,7 +506,7 @@ h3 {
 
 .cards_number_page {
   font-family: "Raleway", sans-serif;
-  color: #000000;
+  color: #000;
   font-weight: 800;
   font-size: 16px;
   line-height: 19px;
