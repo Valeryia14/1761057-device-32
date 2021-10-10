@@ -445,8 +445,26 @@ h3 {
   opacity: 0.6;
 }
 
+.h1_main_inner {
+  display: none;
+}
+
+.catalog_products_container {
+  display: flex;
+}
+
 .catalog_products {
   background: #E5E5E5;
+}
+
+.catalog_left_column {
+  width: 832px;
+}
+
+.catalog_filter {
+  width: 236px;
+  margin-right: 32px;
+  padding-left: 60px;
 }
 
 .product_labe {

@@ -34,7 +34,7 @@
     <main class="main-inner">
       <div class="page-container">
         <section class="inner_way">
-          <h1 class="visually_hidden">Товары</h1>
+          <h1 class="h1_main_inner visually_hidden">Товары</h1>
           <h2 class="inner_way_title">Моноподы для селфи</h1>
           <ul class="inner_way_list">
             <li class="inner_way_item"><a href="#" class="inner_way_link">Главная</a></li>
@@ -43,180 +43,187 @@
           </ul>
         </section>
 
-        <aside class="catalog_products">
-          <h2 class="visually_hidden">Список товаров с фильтрами</h2>
-          <form class="catalog_filter" action="https://echo.htmlacademy.ru/" method="get">
-            <label class="product_label" for="sorting">Фильтр:</label>
-            <fieldset class="filter_price">
-              <legend class="filter_legend">Стоимость</legend>
-              <input class="range_toggle toggle_min" type="range">
-                <span class="visually_hidden">Изменить минимальную цену</span>
-              </input>
-              <input class="range_toggle toggle_man" type="range">
-                <span class="visually_hidden">Изменить максималную цену</span>
-              </input>
+        <div class="catalog_products_container">
+          <div class="catalog_right_column">
+            <aside class="catalog_products">
+              <h2 class="h1_main_inner visually_hidden">Список товаров с фильтрами</h2>
+              <form class="catalog_filter" action="https://echo.htmlacademy.ru/" method="get">
+                <label class="product_label" for="sorting">Фильтр:</label>
+                <fieldset class="filter_price">
+                  <legend class="filter_legend">Стоимость</legend>
+                  <input class="range_toggle toggle_min" type="range">
+                    <span class="visually_hidden">Изменить минимальную цену</span>
+                  </input>
+                  <input class="range_toggle toggle_man" type="range">
+                    <span class="visually_hidden">Изменить максималную цену</span>
+                  </input>
 
-              <label class="filter_price_label">от<input type="number" name="min_price" class="filter_price_input"></label>
-              <label class="filter_price_label">до<input type="number" name="man_price" class="filter_price_input"></label>
-            </fieldset>
+                  <label class="filter_price_label">от<input type="number" name="min_price" class="filter_price_input"></label>
+                  <label class="filter_price_label">до<input type="number" name="man_price" class="filter_price_input"></label>
+                </fieldset>
 
-            <fieldset class="filter_color">
-              <legend class="filter_legend">Цвет</legend>
-              <ul class="filter_color_list">
-                <li class="filter_color_iteam">
-                  <label class="filter_color_label">
-                    <input type="checkbox" name="black" class="filter_color_input" checked>
-                    <span class="control_mark"></span>
-                    <span class="example">Черный</span>
-                  </label>
-                </li>
-                <li filter_color_iteam>
-                  <label class="filter_color_label">
-                    <input type="checkbox" name="white" class="filter_color_input" checked>
-                    <span class="control_mark"></span>
-                    <span class="example">Белый</span>
-                  </label>
-                </li>
-                <li filter_color_iteam>
-                  <label class="filter_color_label">
-                    <input type="checkbox" name="blue" class="filter_color_input">
-                    <span class="control_mark"></span>
-                    <span class="example">Синий</span>
-                  </label>
-                </li>
-                <li filter_color_iteam>
-                  <label class="filter_color_label">
-                    <input type="checkbox" name="red" class="filter_color_input">
-                    <span class="control_mark"></span>
-                    <span class="example">Красный</span>
-                  </label>
-                </li>
-                <li filter_color_iteam>
-                  <label class="filter_color_label">
-                    <input type="checkbox" name="pink" class="filter_color_input">
-                    <span class="control_mark"></span>
-                    <span class="example">Розовый</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
+                <fieldset class="filter_color">
+                  <legend class="filter_legend">Цвет</legend>
+                  <ul class="filter_color_list">
+                    <li class="filter_color_iteam">
+                      <label class="filter_color_label">
+                        <input type="checkbox" name="black" class="filter_color_input" checked>
+                        <span class="control_mark"></span>
+                        <span class="example">Черный</span>
+                      </label>
+                    </li>
+                    <li filter_color_iteam>
+                      <label class="filter_color_label">
+                        <input type="checkbox" name="white" class="filter_color_input" checked>
+                        <span class="control_mark"></span>
+                        <span class="example">Белый</span>
+                      </label>
+                    </li>
+                    <li filter_color_iteam>
+                      <label class="filter_color_label">
+                        <input type="checkbox" name="blue" class="filter_color_input">
+                        <span class="control_mark"></span>
+                        <span class="example">Синий</span>
+                      </label>
+                    </li>
+                    <li filter_color_iteam>
+                      <label class="filter_color_label">
+                        <input type="checkbox" name="red" class="filter_color_input">
+                        <span class="control_mark"></span>
+                        <span class="example">Красный</span>
+                      </label>
+                    </li>
+                    <li filter_color_iteam>
+                      <label class="filter_color_label">
+                        <input type="checkbox" name="pink" class="filter_color_input">
+                        <span class="control_mark"></span>
+                        <span class="example">Розовый</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
 
-            <fieldset class="catalog_filter_bluetooth">
-              <legend class="filter_legend">Bluetooth</legend>
-              <ul class="filter_bluetooth_list">
-                <li class="filter_bluetooth_iteam">
-                  <label class="filter_bluetooth_label">
-                    <input type="radio" name="filter_bluetooth" class="filter_bluetooth_input" value="yes" checked>
-                    <span class="control_mark"></span>
-                    <span class="example">Есть</span>
-                  </label>
-                </li class="filter_bluetooth_iteam">
-                <li>
-                  <label class="filter_bluetooth_label">
-                    <input type="radio" name="filter_bluetooth" class="filter_bluetooth_input" value="no">
-                    <span class="control_mark"></span>
-                    <span class="example">Нет</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-            <button class="filter_button" type="submit">Показать</button>
-          </form>
-        </aside>
+                <fieldset class="catalog_filter_bluetooth">
+                  <legend class="filter_legend">Bluetooth</legend>
+                  <ul class="filter_bluetooth_list">
+                    <li class="filter_bluetooth_iteam">
+                      <label class="filter_bluetooth_label">
+                        <input type="radio" name="filter_bluetooth" class="filter_bluetooth_input" value="yes" checked>
+                        <span class="control_mark"></span>
+                        <span class="example">Есть</span>
+                      </label>
+                    </li class="filter_bluetooth_iteam">
+                    <li>
+                      <label class="filter_bluetooth_label">
+                        <input type="radio" name="filter_bluetooth" class="filter_bluetooth_input" value="no">
+                        <span class="control_mark"></span>
+                        <span class="example">Нет</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <button class="filter_button" type="submit">Показать</button>
+              </form>
+            </aside>
+          </div>
 
-        <section class="sorting_type">
-          <form action="sorting_list">
-            <label class="product_label" for="sorting">Сортировка:</label>
-            <select name="sorting_list" id="sorting">
-              <option class="example" value="popular">Сначала популярные</option>
-              <option class="example" value="new_models">Сначала новый модели</option>
-              <option class="example" value="cheap">Сначала дешевые</option>
-              <option class="example" value="expensive">Сначала дорогие</option>
-            </select>
-            <button class="visually_hidden" type="submit">Отсортировать</button>
-          </form>
+          <div class="catalog_left_column">
+              <section class="sorting_type">
+                <form action="sorting_list">
+                  <label class="product_label" for="sorting">Сортировка:</label>
+                  <select name="sorting_list" id="sorting">
+                    <option class="example" value="popular">Сначала популярные</option>
+                    <option class="example" value="new_models">Сначала новый модели</option>
+                    <option class="example" value="cheap">Сначала дешевые</option>
+                    <option class="example" value="expensive">Сначала дорогие</option>
+                  </select>
+                  <button class="visually_hidden" type="submit">Отсортировать</button>
+                </form>
 
-          <button class="sorting_type_button sorting_type_up">
-            <span class="visually_hidden"> По возрастанию</span>
-          </button>
-          <button class="sorting_type_button sorting_type_down active">
-            <span class="visually_hidden">По убыванию</span>
-          </button>
-        </section>
+                <button class="sorting_type_button sorting_type_up">
+                  <span class="visually_hidden"> По возрастанию</span>
+                </button>
+                <button class="sorting_type_button sorting_type_down active">
+                  <span class="visually_hidden">По убыванию</span>
+                </button>
+              </section>
 
-        <section class="product_cards">
-          <ul class="product_cards_list">
-            <li class="product_card">
-              <a class="product_card_link" href="#">
-                <img class="product_card_image" src="img/selfi_sticks/non_prof_stick.jpg" width="360" height="380" alt="Любительская селфи-палка">
-                <h3 class="product_card_title">Любительская селфи-палка</h3>
-                <p class="product_card_new visually_hidden">NEW</p>
-                <p class="product_card_price">500 ₽</p>
-              </a>
-              <a href="#" class="link all_link product_card_button">Подробнее</a>
-            </li>
-            <li class="product_card">
-              <a class="product_card_link" href="#">
-                <img class="product_card_image" src="img/selfi_sticks/prof_stick.jpg" width="360" height="380" alt="Профессиональная селфи-палка ">
-                <h3 class="product_card_title">Профессиональная селфи-палка</h3>
-                <p class="product_card_new visually_hidden">NEW</p>
-                <p class="product_card_price">1 500 ₽</p>
-              </a>
-              <a href="#" class="link all_link product_card_button visually_hidden">Подробнее</a>
-            </li>
-            <li class="product_card">
-              <a class="product_card_link" href="#">
-                <img class="product_card_image" src="img/selfi_sticks/unsinkable_stick.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-                <h3 class="product_card_title">Непотопляемая селфи-палка</h3>
-                <p class="product_card_new visually_hidden">NEW</p>
-                <p class="product_card_price">2 500 ₽</p>
-              </a>
-              <a href="#" class="link all_link product_card_button visually_hidden">Подробнее</a>
-            </li>
-            <li class="product_card">
-              <a class="product_card_link" href="#">
-                <img class="product_card_image" src="img/selfi_sticks/hand_stick.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-                <h3 class="product_card_title">Селфи-палка «Следуй за мной»</h3>
-                <p class="product_card_new">NEW</p>
-                <p class="product_card_price">4 900 ₽</p>
-              </a>
-              <a href="#" class="link all_link product_card_button visually_hidden">Подробнее</a>
-            </li>
-          </ul>
-          <button class="button cards_show_more" type="button">Загрузить еще</button>
+              <section class="product_cards">
+                <ul class="product_cards_list">
+                  <li class="product_card">
+                    <a class="product_card_link" href="#">
+                      <img class="product_card_image" src="img/selfi_sticks/non_prof_stick.jpg" width="360" height="380" alt="Любительская селфи-палка">
+                      <h3 class="product_card_title">Любительская селфи-палка</h3>
+                      <p class="product_card_new visually_hidden">NEW</p>
+                      <p class="product_card_price">500 ₽</p>
+                    </a>
+                    <a href="#" class="link all_link product_card_button">Подробнее</a>
+                  </li>
+                  <li class="product_card">
+                    <a class="product_card_link" href="#">
+                      <img class="product_card_image" src="img/selfi_sticks/prof_stick.jpg" width="360" height="380" alt="Профессиональная селфи-палка ">
+                      <h3 class="product_card_title">Профессиональная селфи-палка</h3>
+                      <p class="product_card_new visually_hidden">NEW</p>
+                      <p class="product_card_price">1 500 ₽</p>
+                    </a>
+                    <a href="#" class="link all_link product_card_button visually_hidden">Подробнее</a>
+                  </li>
+                  <li class="product_card">
+                    <a class="product_card_link" href="#">
+                      <img class="product_card_image" src="img/selfi_sticks/unsinkable_stick.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+                      <h3 class="product_card_title">Непотопляемая селфи-палка</h3>
+                      <p class="product_card_new visually_hidden">NEW</p>
+                      <p class="product_card_price">2 500 ₽</p>
+                    </a>
+                    <a href="#" class="link all_link product_card_button visually_hidden">Подробнее</a>
+                  </li>
+                  <li class="product_card">
+                    <a class="product_card_link" href="#">
+                      <img class="product_card_image" src="img/selfi_sticks/hand_stick.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+                      <h3 class="product_card_title">Селфи-палка «Следуй за мной»</h3>
+                      <p class="product_card_new">NEW</p>
+                      <p class="product_card_price">4 900 ₽</p>
+                    </a>
+                    <a href="#" class="link all_link product_card_button visually_hidden">Подробнее</a>
+                  </li>
+                </ul>
+                <button class="button cards_show_more" type="button">Загрузить еще</button>
 
-          <section class="pagination_cards">
-            <button class="button cards_number_page" type="button">НАЗАД</button>
-            <ul class="pagination_list">
-              <li class="pagination_item">
-                <a class="pagination_link pagination_prev pagination_disabled">
-                  <p class="pagination_number">1</p>
-                </a>
-              </li>
-              <li class="pagination_item">
-                <a class="pagination_link pagination_prev pagination_disabled">
-                  <p class="pagination_number">2</p>
-                </a>
-              </li>
-              <li class="pagination_item">
-                <a class="pagination_link pagination_prev pagination_disabled">
-                  <p class="pagination_number">3</p>
-                </a>
-              </li>
-              <li class="pagination_item">
-                <a class="pagination_link pagination_prev pagination_disabled">
-                  <p class="pagination_number">...</p>
-                </a>
-              </li>
-              <li class="pagination_item">
-                <a class="pagination_link pagination_prev pagination_disabled">
-                  <p class="pagination_number">15</p>
-                </a>
-              </li>
-            </ul>
-            <button class="button cards_number_page" type="button">ВПЕРЁД</button>
-          </section>
-        </section>
+                <section class="pagination_cards">
+                  <button class="button cards_number_page" type="button">НАЗАД</button>
+                  <ul class="pagination_list">
+                    <li class="pagination_item">
+                      <a class="pagination_link pagination_prev pagination_disabled">
+                        <p class="pagination_number">1</p>
+                      </a>
+                    </li>
+                    <li class="pagination_item">
+                      <a class="pagination_link pagination_prev pagination_disabled">
+                        <p class="pagination_number">2</p>
+                      </a>
+                    </li>
+                    <li class="pagination_item">
+                      <a class="pagination_link pagination_prev pagination_disabled">
+                        <p class="pagination_number">3</p>
+                      </a>
+                    </li>
+                    <li class="pagination_item">
+                      <a class="pagination_link pagination_prev pagination_disabled">
+                        <p class="pagination_number">...</p>
+                      </a>
+                    </li>
+                    <li class="pagination_item">
+                      <a class="pagination_link pagination_prev pagination_disabled">
+                        <p class="pagination_number">15</p>
+                      </a>
+                    </li>
+                  </ul>
+                  <button class="button cards_number_page" type="button">ВПЕРЁД</button>
+                </section>
+              </section>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
