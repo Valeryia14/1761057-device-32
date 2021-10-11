@@ -12,16 +12,18 @@
     <header class="header">
       <a href="#" class="header_logo"><img src="img/main_logo.png" width="145" height="36" alt="Device"></a>
       <nav class="header_nav">
-        <form action="#" method="get" class="header_form">
-          <label class="header_search">
-            <input class="header_input" type="text" name="search" placeholder="Поиск по сайту">
-          </label>
-        </form>
-        <ul class="header_nav_list header_menu_user">
-          <li class="user_iteam"><a href="#" class="link user_link">Войти</a></li>
-          <li class="user_iteam"><a href="#" class="link user_link">Сравнить</a></li>
-          <li class="user_iteam"><span class="header_span">2</span><a href="#" class="link user_link">Корзина</a></li>
-        </ul>
+        <div class="header_menu_user_full">
+          <form action="#" method="get" class="header_form">
+            <label class="header_search">
+              <input class="header_input" type="text" name="search" placeholder="Поиск по сайту">
+            </label>
+          </form>
+          <ul class="header_nav_list header_menu_user">
+            <li class="user_iteam"><a href="#" class="link user_link">Войти</a></li>
+            <li class="user_iteam"><a href="#" class="link user_link">Сравнить</a></li>
+            <li class="user_iteam"><span class="header_span">2</span><a href="#" class="link user_link">Корзина</a></li>
+          </ul>
+        </div>
         <ul class=" header_nav_list header_menu">
           <li class="menu_iteam"><a href="#catalog" class="link menu_link">Каталог товаров</a></li>
           <li class="menu_iteam"><a href="#delivery" class="link menu_link">Доставка</a></li>
@@ -180,8 +182,10 @@
             <li class="product_offers_item bg_drone"><a href="#" class="link product_offers_link">Квадрокоптеры</a></li>
           </ul>
         </section>
+      </div>
 
-        <section class="service">
+      <section class="service">
+        <div class="service_container">
           <section class="scope delivery bg_delivery">
             <div class="service_menu">
               <ul class="service_list">
@@ -226,14 +230,15 @@
                   выгодные условия кредита. Выгодные для банка, разумеется.</p>
             </div>
           </section>
-        </section>
+        </div>
+      </section>
 
+      <div class="page-container">
         <section class="delivery_exclusion">
-          <h2 class="visually-hidden">Доставка под заказ</h2>
+          <h2 class="h2_footer visually-hidden">Доставка под заказ</h2>
+          <div class="bg_delivery_image"></div>
           <p class="delivery_exclusion_text">Доставим редкий товар под заказ</p>
-          <div class="delivery_info visually-hidden">
-            <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-          </div>
+          <div class="bg_delivery_info"></div>
         </section>
 
         <section class="information">
@@ -268,24 +273,24 @@
         </section>
       </div>
 
-        <section class="sign">
-          <div class="sign_container">
-            <div class="sign_call">
-              <h2 class="sign_title">
-                <label for="sign_email">Подпишитесь на рассылку</label>
-              </h2>
-              <p class="sign_text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами,
-                распаковками, а также акции, спецпредложения и вот это вот всё.</p>
-            </div>
-            <div class="sign_action">
-              <form class="sign_form" action="https://echo.htmlacademy.ru/" method="post">
-                <input type="email" name="email" id="sign_email" placeholder="Ваш e-mail">
-                <button class="button" type="submit">Подписаться</button>
-              </form>
-              <p class="sign_text">Это бесплатно</p>
-            </div>
+      <section class="sign">
+        <div class="page-container">
+          <div class="sign_call">
+            <h2 class="sign_title">
+              <label for="sign_email">Подпишитесь на рассылку</label>
+            </h2>
+            <p class="sign_text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами,
+              распаковками, а также акции, спецпредложения и вот это вот всё.</p>
           </div>
-        </section>
+          <div class="sign_action">
+            <form class="sign_form" action="https://echo.htmlacademy.ru/" method="post">
+              <input type="email" name="email" id="sign_email" placeholder="Ваш e-mail">
+              <button class="button" type="submit">Подписаться</button>
+            </form>
+            <p class="sign_text">Это бесплатно</p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="main_footer">

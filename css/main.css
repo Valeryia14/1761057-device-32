@@ -106,6 +106,10 @@ h3 {
   margin: 0 auto;
 }
 
+.header_menu_user_full {
+  display: flex;
+}
+
 .user_iteam {
   margin-right: 50px; /*Условно*/
 }
@@ -170,7 +174,7 @@ h3 {
   text-align: center;
 }
 
-/*Main_page Description*/
+/*Main Page Description*/
 .description_compare {
   font-family: "Raleway", sans-serif;
   color: #000;
@@ -191,7 +195,7 @@ h3 {
 }
 
 
-/*Product_offers*/
+/*Product Offers*/
 .product_offers_list {
   display: flex;
   justify-content: space-between;
@@ -242,6 +246,11 @@ h3 {
   background: #F0F0F0;
 }
 
+.service_container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
 .scope {
   display: flex;
 }
@@ -282,8 +291,18 @@ h3 {
   line-height: 21px;
 }
 
+/*Delivery Exclusion*/
 .delivery_exclusion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: #F0F0F0;
+}
+
+.bg_delivery_image {
+  background: #FFE17F url('../img/rare_delivery.svg') no-repeat center;
+  width: 125px;
+  height: 100px;
 }
 
 .delivery_exclusion_text {
@@ -294,7 +313,17 @@ h3 {
     line-height: 23,5px;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 2px; /*В макете 20%. Как перевести в px?*/
+    margin: 0;
+}
+
+.bg_delivery_info {
+  background: url('../img/info.svg') no-repeat center;
+  background-color: rgb(220, 220, 220, 0.5);
+  border-radius: 50%;
+  opacity: 0.5;
+  width: 40px;
+  height: 40px;
+  margin-right: 33px;
 }
 
 /*Information*/
@@ -444,6 +473,20 @@ h3 {
   opacity: 0.6;
 }
 
+.inner_way_list {
+  display: flex;
+  margin: 0;
+  margin-left: 60px;
+}
+
+.inner_way_item {
+  margin-right: 36px;
+}
+
+.inner_way_title {
+  margin-left: 60px;
+}
+
 .h1_main_inner {
   display: none;
 }
@@ -540,6 +583,21 @@ h3 {
 
 .pagination_cards {
   background: #E5E5E5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination_list {
+  display: flex;
+}
+
+.pagination_item {
+  margin-right: 29px;
+}
+
+.pagination_item:last-child {
+  margin-right: 0;
 }
 
 .cards_number_page {
