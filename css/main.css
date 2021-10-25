@@ -2,8 +2,8 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/rubik/rubik-400.woff2") format("woff2"),
-       url("fonts/rubik/rubik-400.woff") format("woff");
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2"),
+       url("../fonts/rubik/rubik-400.woff") format("woff");
   font-display: swap;
 }
 
@@ -11,8 +11,8 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
-  src: url("fonts/rubik/rubik-700.woff2") format("woff2"),
-       url("fonts/rubik/rubik-700.woff") format("woff");
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2"),
+       url("../fonts/rubik/rubik-700.woff") format("woff");
   font-display: swap;
 }
 
@@ -20,8 +20,8 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 800;
-  src: url("fonts/rubik/rubik-800.woff2") format("woff2"),
-       url("fonts/rubik/rubik-800.woff") format("woff");
+  src: url("../fonts/rubik/rubik-800.woff2") format("woff2"),
+       url("../fonts/rubik/rubik-800.woff") format("woff");
   font-display: swap;
 }
 
@@ -29,8 +29,8 @@
   font-family: "Raleway";
   font-style: normal;
   font-weight: 800;
-  src: url("fonts/raleway/raleway-800.woff2") format("woff2"),
-       url("fonts/raleway/raleway-800.woff") format("woff");
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2"),
+       url("../fonts/raleway/raleway-800.woff") format("woff");
   font-display: swap;
 }
 
@@ -576,8 +576,10 @@ h3 {
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
+  letter-spacing: 0.2em;
   width: 260px;
   margin-left: auto;
+  background-color: transparent;
 }
 
 .sign_action_text {
@@ -612,18 +614,20 @@ h3 {
   padding-top: 62px;
 }
 
+.footer_info::after {
+  content: "";
+  position: absolute;
+  background-color: #FFC500;
+  width: 80px;
+  height: 7px;
+}
+
 .footer_logo_img {
   margin-bottom: 35px;
 }
 
 .footer_address {
   margin-bottom: 66px;
-}
-
-.bg_footer_stripe{
-  background-color: #FFC500;
-  width: 80px;
-  height: 7px;
 }
 
 .footer_menu {
@@ -674,7 +678,8 @@ h3 {
 
 .footer_link {
   color: #FFF;
-  line-height: 21px;
+  line-height: 21.13px;
+  letter-spacing: 0.2em;
 }
 
 .footer_contacts {
@@ -691,7 +696,7 @@ h3 {
 .footer_address {
   font-style: normal;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 18.96px;
 }
 
 .footer_contacts_phone {
@@ -699,6 +704,7 @@ h3 {
   font-size: 16px;
   font-style: normal;
   text-decoration: none;
+  line-height: 30px;
 }
 
 /*CATALOG*/
@@ -821,13 +827,19 @@ h3 {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 360px);
   padding-top: 69px;
   padding-left: 72px;
-  gap: 40px;
+  gap: 44px 40px;
+  margin-bottom: 51px;
+}
+
+.product_card_btn {
+  grid-column: 1 / -1;
 }
 
 .product_card_price {
+  margin: 0;
   color: #444;
   font-size: 18px;
   line-height: 21px;
@@ -842,19 +854,37 @@ h3 {
   opacity: 0.6;
 }
 
-.product_card_link  {
+.product_card_link {
   text-decoration: none;
 }
 
+.product_card_image {
+  display: block;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.product_card_title {
+  max-width: 280px;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+}
+
+.card_description {
+  display: flex;
+  justify-content: space-between;
+}
+
 .cards_show_more {
-  font-family: "Raleway", sans-serif;
-  color: #000;
-  font-weight: 800;
   font-size: 16px;
   line-height: 19px;
   text-transform: uppercase;
-  background-color: #FFF;
-  margin-left: 72px;
+  padding: 18px 0;
+  grid-column: 1 / -1;
+  width: 100%;
+  text-align: center;
+  border: 3px solid rgb(0, 0, 0, 0.1);
 }
 
 .pagination_cards {
@@ -882,14 +912,24 @@ h3 {
 }
 
 .cards_number_page {
-  font-family: "Raleway", sans-serif;
-  color: #000;
-  font-weight: 800;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 18.78px;
   text-transform: uppercase;
   margin: 0;
+  padding: 0;
   border: none;
+  padding: 26px 0 25px 0;
+  max-width: 90px;
+}
+
+.btn_back {
+  margin-left: 29px;
+  text-align: left;
+}
+
+.btn_forward {
+  margin-right: 33px;
+  text-align: right;
 }
 
 .pagination_number {
