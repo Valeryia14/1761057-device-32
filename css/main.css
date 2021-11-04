@@ -231,6 +231,10 @@ h3 {
   display: block;
 }
 
+.header_form:focus-within .header_input:not(:placeholder-shown) {
+  outline: 2px solid #000;
+}
+
 .header_nav_list {
   display: flex;
   flex-wrap: wrap;
@@ -492,15 +496,19 @@ h3 {
 
 .link_catalog:hover ~ .icon_catalog_minus {
   opacity: 1;
-  margin: 0px;
+  margin-left: 0px;
   border: 2px solid rgba(0, 0, 0);
 }
 
-/*При фокусе outline будет заходить на соседний элемент. Ошибка в отрисовке дизайна*/
 .link_catalog:focus-visible {
   outline: 2px solid #AF4FFF;
   border-radius: 25px;
-  padding: 0 20px;
+  padding: 0 15px;
+  margin-left: -15px;
+  margin-right: 22px;
+}
+
+.link_catalog:focus-visible ~ .icon_catalog_minus {
   margin-left: -20px;
 }
 
@@ -796,6 +804,11 @@ h3 {
   border-color: transparent;
 }
 
+.switch_button.switch_button_current:focus {
+  outline: 2px solid #000;
+  outline-offset: -2px;
+}
+
 .switch_button:active {
   box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.3) inset;
 }
@@ -1040,7 +1053,15 @@ h3 {
   justify-content: space-between;
   align-items: center;
   background: #F0F0F0;
+}
+
+.link_delivery_exclusion {
+  display: block;
   margin-bottom: 147px;
+}
+
+.link_delivery_exclusion:focus-visible {
+  outline: 5px solid #AF4FFF;
 }
 
 .delivery_exclusion:hover .bg_delivery_image {
@@ -1269,10 +1290,7 @@ h3 {
 
 .field_email:focus {
   background-color: #DCDCDC;
-}
-
-.field_email:active {
-  border-bottom: 3px solid rgb(0, 0, 0);
+  border-bottom: 3px solid #d8d8d8;
   outline: none;
 }
 
@@ -1307,6 +1325,7 @@ h3 {
 }
 
 .sign_button:focus {
+  outline: none;
   border: 3px solid #AF4FFF;
 }
 
@@ -1374,13 +1393,6 @@ h3 {
 
 .link_logo:hover {
   opacity: 0.6;
-}
-
-.link_logo:focus {
-  outline: 2px solid #AF4FFF;
-  outline-offset: 10px;
-  border-radius: 10px;
-  width: 147px;
 }
 
 .link_logo:active {
@@ -1546,7 +1558,7 @@ h3 {
 .link_logo_footer:focus {
   outline: 2px solid #AF4FFF;
   outline-offset: 10px;
-  border-radius: 10px;
+  border-radius: 1px;
 }
 
 .link_logo_footer:active .icon_html{
