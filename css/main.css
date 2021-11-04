@@ -108,12 +108,6 @@ h3 {
   opacity: 0.6;
 }
 
-.header_logo:focus {
-  outline: 2px solid #AF4FFF;
-  outline-offset: 5px;
-  border-radius: 25px;
-}
-
 .header_logo:active {
   opacity: 0.3;
 }
@@ -502,6 +496,7 @@ h3 {
   border: 2px solid rgba(0, 0, 0);
 }
 
+/*При фокусе outline будет заходить на соседний элемент. Ошибка в отрисовке дизайна*/
 .link_catalog:focus-visible {
   outline: 2px solid #AF4FFF;
   border-radius: 25px;
@@ -741,6 +736,8 @@ h3 {
 
 .all_link:focus {
   background: linear-gradient(to bottom, transparent 0px 7px, #AF4FFF 7px 15px, transparent 15px 20px);
+  box-shadow: 0 -9px 0 0 #FFF,
+              0 11px 0 0 #FFF;
 }
 
 .all_link:active {
@@ -794,7 +791,9 @@ h3 {
 }
 
 .switch_button:focus{
-  box-shadow: 0px 0px 0px 2px rgb(175, 79, 255) inset;
+  outline: 2px solid #AF4FFF;
+  outline-offset: -2px;
+  border-color: transparent;
 }
 
 .switch_button:active {
@@ -1381,6 +1380,7 @@ h3 {
   outline: 2px solid #AF4FFF;
   outline-offset: 10px;
   border-radius: 10px;
+  width: 147px;
 }
 
 .link_logo:active {
