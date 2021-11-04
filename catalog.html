@@ -15,13 +15,14 @@
       <nav class="header_nav">
         <div class="header_menu_full">
           <form action="#" method="get" class="header_form">
-            <svg class="icon_search" aria-hidden="true" focusable="false" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="m15.7 14.3-3.1-3.1C13.5 10 14 8.6 14 7c0-3.9-3.1-7-7-7S0 3.1 0 7s3.1 7 7 7c1.6 0 3-.5 4.2-1.4l3.1 3.1c.2.2.4.3.7.3.6 0 1-.4 1-1 0-.2-.1-.5-.3-.7ZM2 7c0-2.8 2.2-5 5-5s5 2.2 5 5-2.2 5-5 5-5-2.2-5-5Z" fill="#000"/>
-            </svg>
-            <label class="header_search">
-              <input class="header_input" type="text" name="search" placeholder="Поиск по сайту">
-              <button class="btn_search">Найти</button>
+            <label class="header_search" for="search">
+              <svg class="icon_search" aria-hidden="true" focusable="false" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="m15.7 14.3-3.1-3.1C13.5 10 14 8.6 14 7c0-3.9-3.1-7-7-7S0 3.1 0 7s3.1 7 7 7c1.6 0 3-.5 4.2-1.4l3.1 3.1c.2.2.4.3.7.3.6 0 1-.4 1-1 0-.2-.1-.5-.3-.7ZM2 7c0-2.8 2.2-5 5-5s5 2.2 5 5-2.2 5-5 5-5-2.2-5-5Z" fill="#000"/>
+              </svg>
+              <div class="visually_hidden">Поиск по сайту</div>
             </label>
+            <input class="header_input" type="text" name="search" placeholder="Поиск по сайту">
+            <button class="btn_search">Найти</button>
           </form>
           <ul class="header_nav_list header_menu_user">
             <li class="user_item user_name">
@@ -171,8 +172,8 @@
                         <span class="control_mark"></span>
                         <span class="example">Есть</span>
                       </label>
-                    </li class="filter_bluetooth_item">
-                    <li>
+                    </li>
+                    <li class="filter_bluetooth_item">
                       <label class="filter_bluetooth_label">
                         <input type="radio" name="filter_bluetooth" class="filter_input visually_hidden" value="no">
                         <span class="control_mark"></span>
@@ -203,13 +204,13 @@
               <div class="sorting_switch">
                 <button class="sorting_type_button sorting_type_up">
                   <span class="visually_hidden"> По возрастанию</span>
-                  <svg class="icon_sorting_switch" width="11" height="10" fill="#000" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="icon_sorting_switch" width="11" height="10" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.5 0 11 10H0"/>
                   </svg>
                 </button>
                 <button class="sorting_type_button sorting_type_down active">
                   <span class="visually_hidden">По убыванию</span>
-                  <svg class="icon_sorting_switch" width="11" height="10" fill="#000" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="icon_sorting_switch" width="11" height="10" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.5 10 0 0h11"/>
                   </svg>
                 </button>
@@ -224,52 +225,52 @@
                       <img class="product_card_image" src="img/selfi_sticks/non_prof_stick.jpg" width="360" height="380" alt="Любительская селфи-палка">
                       <div class="card_description">
                         <h3 class="product_card_title">Любительская селфи-палка</h3>
-                        <p class="product_card_price">500 ₽</p>
+                        <span class="product_card_price">500 ₽</span>
                       </div>
                       <div class="product_new visually_hidden">
                         <span class="product_card_new">NEW</span>
                       </div>
                     </a>
-                    <a href="#" class="link all_link product_card_button visually_hidden">Подробнее</a>
+                    <a href="#" class="link all_link product_card_button">Подробнее</a>
                   </li>
                   <li class="product_card">
                     <a class="product_card_link" href="#">
                       <img class="product_card_image" src="img/selfi_sticks/prof_stick.jpg" width="360" height="380" alt="Профессиональная селфи-палка ">
                       <div class="card_description">
                         <h3 class="product_card_title">Профессиональная<br> селфи-палка</h3>
-                        <p class="product_card_price">1 500 ₽</p>
+                        <span class="product_card_price">1 500 ₽</span>
                       </div>
                       <div class="product_new visually_hidden">
                         <span class="product_card_new">NEW</span>
                       </div>
                     </a>
-                    <a href="#" class="link all_link product_card_button visually_hidden">Подробнее</a>
+                    <a href="#" class="link all_link product_card_button">Подробнее</a>
                   </li>
                   <li class="product_card">
                     <a class="product_card_link" href="#">
                       <img class="product_card_image" src="img/selfi_sticks/unsinkable_stick.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
                       <div class="card_description">
                         <h3 class="product_card_title">Непотопляемая<br> селфи-палка</h3>
-                        <p class="product_card_price">2 500 ₽</p>
+                        <span class="product_card_price">2 500 ₽</span>
                       </div>
                       <div class="product_new visually_hidden">
                         <span class="product_card_new">NEW</span>
                       </div>
                     </a>
-                    <a href="#" class="link all_link product_card_button visually_hidden">Подробнее</a>
+                    <a href="#" class="link all_link product_card_button">Подробнее</a>
                   </li>
                   <li class="product_card">
                     <a class="product_card_link" href="#">
                       <img class="product_card_image" src="img/selfi_sticks/hand_stick.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
                       <div class="card_description">
                         <h3 class="product_card_title">Селфи-палка «Следуй за мной»</h3>
-                        <p class="product_card_price">4 900 ₽</p>
+                        <span class="product_card_price">4 900 ₽</span>
                       </div>
                       <div class="product_new">
                         <span class="product_card_new">NEW</span>
                       </div>
                     </a>
-                    <a href="#" class="link all_link product_card_button visually_hidden">Подробнее</a>
+                    <a href="#" class="link all_link product_card_button">Подробнее</a>
                   </li>
                 </ul>
                 <button class="button cards_show_more" type="button">Загрузить ещё</button>
@@ -279,29 +280,19 @@
                 <button class="button cards_number_page btn_back" type="button">НАЗАД</button>
                 <ul class="pagination_list">
                   <li class="pagination_item">
-                    <a class="pagination_link pagination_prev pagination_disabled">
-                      <p class="pagination_number">1</p>
-                    </a>
+                    <a class="pagination_link pagination_number">1</a>
                   </li>
                   <li class="pagination_item">
-                    <a class="pagination_link pagination_prev pagination_disabled">
-                      <p class="pagination_number">2</p>
-                    </a>
+                    <a class="pagination_link pagination_number">2</a>
                   </li>
                   <li class="pagination_item">
-                    <a class="pagination_link pagination_prev pagination_disabled">
-                      <p class="pagination_number">3</p>
-                    </a>
+                    <a class="pagination_link pagination_number">3</a>
                   </li>
                   <li class="pagination_item">
-                    <a class="pagination_link pagination_prev pagination_disabled">
-                      <p class="pagination_number">...</p>
-                    </a>
+                    <a class="pagination_link pagination_number">...</a>
                   </li>
                   <li class="pagination_item">
-                    <a class="pagination_link pagination_prev pagination_disabled">
-                      <p class="pagination_number">15</p>
-                    </a>
+                    <a class="pagination_link pagination_number">15</a>
                   </li>
                 </ul>
                 <button class="button cards_number_page btn_forward" type="button">ВПЕРЁД</button>

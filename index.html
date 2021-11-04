@@ -16,13 +16,14 @@
       <nav class="header_nav">
         <div class="header_menu_full">
           <form action="#" method="get" class="header_form">
-            <svg class="icon_search" aria-hidden="true" focusable="false" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="m15.7 14.3-3.1-3.1C13.5 10 14 8.6 14 7c0-3.9-3.1-7-7-7S0 3.1 0 7s3.1 7 7 7c1.6 0 3-.5 4.2-1.4l3.1 3.1c.2.2.4.3.7.3.6 0 1-.4 1-1 0-.2-.1-.5-.3-.7ZM2 7c0-2.8 2.2-5 5-5s5 2.2 5 5-2.2 5-5 5-5-2.2-5-5Z" fill="#000"/>
-            </svg>
-            <label class="header_search">
-              <input class="header_input" type="text" name="search" placeholder="Поиск по сайту">
-              <button class="btn_search">Найти</button>
+            <label class="header_search" for="search">
+              <svg class="icon_search" aria-hidden="true" focusable="false" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="m15.7 14.3-3.1-3.1C13.5 10 14 8.6 14 7c0-3.9-3.1-7-7-7S0 3.1 0 7s3.1 7 7 7c1.6 0 3-.5 4.2-1.4l3.1 3.1c.2.2.4.3.7.3.6 0 1-.4 1-1 0-.2-.1-.5-.3-.7ZM2 7c0-2.8 2.2-5 5-5s5 2.2 5 5-2.2 5-5 5-5-2.2-5-5Z" fill="#000"/>
+              </svg>
+              <div class="visually_hidden">Поиск по сайту</div>
             </label>
+            <input class="header_input" type="text" name="search" placeholder="Поиск по сайту">
+            <button class="btn_search">Найти</button>
           </form>
           <ul class="header_nav_list">
             <li class="item_entrance">
@@ -49,6 +50,39 @@
                 </svg>
                 Корзина
               </a>
+
+              <div class="popover">
+                <div class="popover_wrapper">
+                  <h2 class="popover_title visually_hidden">Корзина</h2>
+                  <ul class="popover_basket_list">
+                    <li class="poover_basket_item">
+                      <img class="popover_image" src="img/selfi_sticks/non_prof_stick.jpg" width="41" height="43" alt="Любительская селфи-палка">
+                      <span class="popover_text">Любительская селфи-палка</span>
+                      <button class="delete_item">
+                        <svg class="icon_delete" width="11" height="11" xmlns="http://www.w3.org/2000/svg">
+                          <path d="m11 1-1-1-4.5 4.5L1 0 0 1l4.5 4.5L0 10l1 1 4.5-4.5L10 11l1-1-4.5-4.5L11 1Z"/>
+                        </svg>
+                      </button>
+                    </li>
+                    <li class="poover_basket_item">
+                      <img class="popover_image" src="img/selfi_sticks/prof_stick.jpg" width="41" height="43" alt="Любительская селфи-палка">
+                      <span class="popover_text">Профессиональная селфи-палка</span>
+                      <button class="delete_item">
+                        <svg class="icon_delete" width="11" height="11" xmlns="http://www.w3.org/2000/svg">
+                          <path d="m11 1-1-1-4.5 4.5L1 0 0 1l4.5 4.5L0 10l1 1 4.5-4.5L10 11l1-1-4.5-4.5L11 1Z"/>
+                        </svg>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="total">
+                  <span class="total_items">Товаров: 2</span>
+                  <span class="summa">Сумма: 2000 ₽</span>
+                </div>
+                <div class="popover_wrapper">
+                  <a class="link link_open_basket">Открыть корзину</a>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -434,7 +468,7 @@
           <div class="sign_action">
             <form class="sign_form" action="https://echo.htmlacademy.ru/" method="post">
               <input class="field_email" type="email" name="email" id="sign_email" placeholder="Ваш e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-              <button class="button" type="submit">Подписаться</button>
+              <button class="button sign_button" type="submit">Подписаться</button>
             </form>
             <div class="sign_span">
               <span class="sign_action_text">Это бесплатно</span>
