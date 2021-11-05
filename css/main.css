@@ -2261,11 +2261,14 @@ h3 {
   display: none;
 }
 
-.product_card_link:hover + .product_card_button {
+.product_card:hover .product_card_link::after {
   display: block;
 }
-.product_card_link:hover::after {
+
+.product_card:hover .product_card_button {
   display: block;
+  background: linear-gradient(to bottom, transparent 0px 7px, #FFE17F 7px 15px, transparent 15px 20px);
+  box-shadow: none;
 }
 
 .product_card_link:focus .card_description .product_card_title {
