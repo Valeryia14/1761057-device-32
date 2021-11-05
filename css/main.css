@@ -126,6 +126,7 @@ h3 {
   margin: 0 auto;
   padding-left: 60px;
   padding-right: 25px;
+  position: relative;
 }
 
 .header_menu_full {
@@ -535,6 +536,10 @@ h3 {
   border: 2px solid rgba(0, 0, 0);
 }
 
+.link_catalog:hover ~ .submenu_wrapper {
+  display: flex;
+}
+
 .link_catalog:focus-visible {
   outline: 2px solid #AF4FFF;
   border-radius: 25px;
@@ -592,26 +597,63 @@ h3 {
   opacity: 0;
 }
 
+.submenu_wrapper {
+  display: none;
+}
+
 .submenu {
   display: flex;
   position: absolute;
-  margin-top: 63px;
-  width: 1160px;
-  background-color: burlywood;
-  z-index: 2;
+  margin-top: 53px;
+  left: 0;
+  padding: 30px 45px 57px 45px;
+  width: 1070px;
+  background-color: #ffe17f;
+  z-index: 1;
 }
 
 .submenu_list {
-  list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-right: 50px;
+  min-width: 200px;
+  line-height: 18px;
+  margin-right: 16px;
 }
 
-.submenu_item {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 15px;
+.submit_watch {
+  margin-right: 1px;
+}
+
+.submenu_item:not(:last-child) {
+  margin-bottom: 17px;
+}
+
+.submenu_link {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #000;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 0 15px;
+}
+
+.submenu_link:hover {
+  opacity: 0.6;
+}
+
+.item_catalog:focus-within .submenu_wrapper {
+  display: block;
+}
+
+.item_catalog:focus-within .submenu_link:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 5px;
+  border-radius: 25px;
+}
+
+.submenu_link:active {
+  opacity: 0.3;
 }
 
 .menu_link {
@@ -2049,6 +2091,7 @@ h3 {
 .filter_button:focus {
   outline: none;
   background: linear-gradient(to bottom, transparent 0px 8px, #AF4FFF 8px 16px, transparent 16px 20px);
+  box-shadow: 0 -9px 0 0 transparent, 0 11px 0 0 transparent;
 }
 
 .filter_button:active {
@@ -2357,7 +2400,8 @@ h3 {
 .pagination_number {
   font-size: 16px;
   line-height: 19px;
-  opacity: 0.3;
+  color: rgb(0, 0, 0, 0.3);
+  text-decoration: none;
   padding: 3px 10px 6px 11px;
   cursor: pointer;
 }
@@ -2366,8 +2410,8 @@ h3 {
   opacity: 1;
 }
 
-.pagination_list:focus-within .pagination_number{
-  outline: 5px solid #AF4FFF;
+.pagination_number:focus {
+  outline: 5px solid rgb(175, 79, 255, 1);
 }
 
 .pagination_number:active {
