@@ -2080,6 +2080,7 @@ h3 {
   width: 200px;
   letter-spacing: 0.2em;
   background: linear-gradient(to bottom, transparent 0px 8px, #FFC700 8px 16px, transparent 16px 20px);
+  cursor: pointer;
 }
 
 .filter_button:hover {
