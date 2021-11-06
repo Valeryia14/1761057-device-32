@@ -2092,7 +2092,8 @@ h3 {
 .filter_button:focus {
   outline: none;
   background: linear-gradient(to bottom, transparent 0px 8px, #AF4FFF 8px 16px, transparent 16px 20px);
-  box-shadow: 0 -9px 0 0 transparent, 0 11px 0 0 transparent;
+  box-shadow: 0 -9px 0 0 transparent,
+              0 11px 0 0 transparent;
 }
 
 .filter_button:active {
@@ -2445,7 +2446,6 @@ h3 {
   border: 10px solid #000;
   box-sizing: border-box;
   box-shadow: 0 10px 0 0 rgb(0, 0, 0, 0.1);
-  display: none;
 }
 
 .modal_auth {
@@ -2462,6 +2462,19 @@ h3 {
   background: url("../img/modal_close.svg") no-repeat center;
   border: none;
   cursor: pointer;
+}
+
+.btn_modal_close:hover {
+  opacity: 0.6;
+}
+
+.btn_modal_close:focus {
+  outline: 5px solid #AF4FFF;
+  border-radius: 50%;
+}
+
+.btn_modal_close:active {
+  opacity: 0.3;
 }
 
 .modal_title {
@@ -2488,6 +2501,11 @@ h3 {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+.add_info {
+  line-height: 20px;
+  margin-bottom: 14px;
 }
 
 .icon_modal {
@@ -2531,6 +2549,30 @@ h3 {
   font-family: "Rubik", sans-serif;
 }
 
+.modal_input:focus {
+  outline: 5px solid #AF4FFF;
+}
+
+.modal_input:not(:placeholder-shown) {
+  outline: 3px solid #000;
+  outline-offset: -4px;
+  background: transparent;
+}
+
+.modal_input:not(:placeholder-shown) ~ .prompt_span.prompt_user {
+  color: #000;
+}
+
+.modal_input[type="email"]:invalid {
+  outline: 3px solid #FF3D3D;
+  outline-offset: -4px;
+  background: transparent;
+}
+
+.modal_input[type="email"]:invalid ~ .prompt_span {
+  color: #FF3D3D;
+}
+
 .add_info {
   line-height: 20px;
   margin-bottom: 14px;
@@ -2548,7 +2590,7 @@ h3 {
 
 .bg_btn_info {
   position: absolute;
-  background: url('../img/info.svg') no-repeat center;
+  background: url('../img/info_hover.svg') no-repeat center;
   background-color: #FFE17F;
   border-radius: 50%;
   width: 26px;
@@ -2563,9 +2605,20 @@ h3 {
   background-color: #000;
   box-sizing: border-box;
   position: absolute;
-  top: 30px;
-  right: 0;
+  top: 34px;
+  right: -20px;
+  z-index: 1;
   display: none;
+}
+
+.supplement::before {
+  content: '';
+  position: absolute;
+  background: url("../img/triangle.svg") no-repeat center;
+  width: 14px;
+  height: 6px;
+  top: -6px;
+  right: 41px;
 }
 
 .supplement_text {
@@ -2583,10 +2636,23 @@ h3 {
 }
 
 .input_number {
-  padding: 23px 0 22px;
+  padding: 20px 45px;
   margin: 0;
-  width: 60px;
+  width: 160px;
   text-align: center;
+  line-height: 20px;
+  appearance: textfield;
+  border: none;
+}
+
+.modal_input[type="number"]:not(:placeholder-shown) ~ .btn_regulator svg {
+  outline: none;
+}
+
+.input_number::-webkit-outer-spin-button,
+.input_number::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 .input_number::placeholder {
@@ -2608,6 +2674,7 @@ h3 {
 
 .btn_number {
   display: flex;
+  position: relative;
 }
 
 .icon_less,
@@ -2617,12 +2684,36 @@ h3 {
 }
 
 .btn_regulator {
+  position: absolute;
   outline: none;
   border: none;
   width: 50px;
   margin: 0;
   padding: 0;
-  background-color: #F0F0F0;
+  background-color: transparent;
+  top: 14px;
+}
+
+.btn_regulator:hover svg {
+  fill: rgb(0, 0, 0, 1);
+}
+
+.btn_number:focus-within .icon_less {
+  outline: 2px solid #AF4FFF;
+  border-radius: 50%;
+}
+
+.btn_number:focus-within .icon_more {
+  outline: 2px solid #AF4FFF;
+  border-radius: 50%;
+}
+
+.btn_regulator:active svg {
+  fill: rgb(0, 0, 0, 0.1);
+}
+
+.plus-btn {
+  right: 0;
 }
 
 .modal_btn {
@@ -2631,9 +2722,29 @@ h3 {
   min-width: 200px;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
-  letter-spacing: 0.2em;
   line-height: 21px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   background: linear-gradient(to bottom, transparent 0px 7px, #FFC700 7px 15px, transparent 15px 20px);
+  cursor: pointer;
+}
+
+.modal_btn:hover {
+  background: #FFC700;
+  box-shadow: 0 -9px 0 0 #FFC700,
+              0 11px 0 0 #FFC700;
+}
+
+.modal_btn:focus {
+  outline: none;
+  background: linear-gradient(to bottom, transparent 0px 7px, #AF4FFF 7px 15px, transparent 15px 20px);
+  box-shadow: 0 -9px 0 0 transparent,
+              0 11px 0 0 transparent;
+}
+
+.modal_btn:active {
+  color: rgba(0, 0, 0, 0.3);
+  background: #FFC700;
+  box-shadow: 0 -9px 0 0 #FFC700,
+              0 11px 0 0 #FFC700;
 }
