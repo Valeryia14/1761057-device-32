@@ -2271,17 +2271,17 @@ h3 {
   box-shadow: none;
 }
 
-.product_card_link:focus .card_description .product_card_title {
+.product_card_link:focus-within .product_card_title {
   color: #AF4FFF;
   outline: none;
 }
 
-.product_card_link:focus .card_description .product_card_price {
+.product_card_link:focus-within .product_card_price {
   color: #AF4FFF;
   outline: none;
 }
 
-.product_card_link:focus .product_card_image {
+.product_card_link:focus-within .product_card_image {
   outline: 5px solid #AF4FFF;
   outline-offset: -5px;
 }
@@ -2420,4 +2420,220 @@ h3 {
 
 .pagination_number:active {
   opacity: 0.1;
+}
+
+.modal_container {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(240, 240, 240, 0.9);
+  z-index: 2;
+}
+
+.modal_container_close {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 67px 70px 66px 70px;
+  background-color: #FFF;
+  border: 10px solid #000;
+  box-sizing: border-box;
+  box-shadow: 0 10px 0 0 rgb(0, 0, 0, 0.1);
+  display: none;
+}
+
+.modal_auth {
+  width: 920px;
+}
+
+.btn_modal_close {
+  position: absolute;
+  padding: 0;
+  top: 71px;
+  right: 58px;
+  width: 50px;
+  height: 50px;
+  background: url("../img/modal_close.svg") no-repeat center;
+  border: none;
+  cursor: pointer;
+}
+
+.modal_title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 69px;
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000;
+}
+
+.modal_info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.additional_info {
+  margin-bottom: 44px;
+}
+
+.user_info {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.icon_modal {
+  position: absolute;
+  width: 13px;
+  height: 12px;
+  fill: #B3B3B3;
+  top: 58px;
+  right: 21px;
+}
+
+.icon_email_modal {
+  width: 15px;
+  right: 20px;
+}
+
+.modal_label {
+  color: #000;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+  padding-right: 10px;
+}
+
+.modal_input {
+  margin: 0;
+  padding: 0;
+  width: 360px;
+  border: none;
+  background-color: #F0F0F0;
+  padding: 22px 50px 23px 20px;
+  box-sizing: border-box;
+  margin-bottom: 6px;
+}
+
+.modal_input::placeholder {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(0, 0, 0, 0.6);
+  font-family: "Rubik", sans-serif;
+}
+
+.add_info {
+  line-height: 20px;
+  margin-bottom: 14px;
+}
+
+.modal_info_btn {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.modal_info_btn:hover + .supplement {
+  display: block;
+}
+
+.bg_btn_info {
+  position: absolute;
+  background: url('../img/info.svg') no-repeat center;
+  background-color: #FFE17F;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  top: -2px;
+  right: 14px;
+}
+
+.supplement {
+  width: 200px;
+  padding: 19px 17px 21px 19px;
+  background-color: #000;
+  box-sizing: border-box;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  display: none;
+}
+
+.supplement_text {
+  padding: 0;
+  margin: 0;
+  color: #FFF;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.input_needs {
+  width: 560px;
+}
+
+.input_number {
+  padding: 23px 0 22px;
+  margin: 0;
+  width: 60px;
+  text-align: center;
+}
+
+.input_number::placeholder {
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  color: #000;
+  line-height: 20px;
+}
+
+.prompt_span {
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+}
+
+.prompt_user {
+  color: #FF3D3D;
+}
+
+.btn_number {
+  display: flex;
+}
+
+.icon_less,
+.icon_more {
+  fill: rgba(0, 0, 0, 0.3);
+  padding: 6px;
+}
+
+.btn_regulator {
+  outline: none;
+  border: none;
+  width: 50px;
+  margin: 0;
+  padding: 0;
+  background-color: #F0F0F0;
+}
+
+.modal_btn {
+  outline: none;
+  border: none;
+  min-width: 200px;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  line-height: 21px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  background: linear-gradient(to bottom, transparent 0px 7px, #FFC700 7px 15px, transparent 15px 20px);
 }
