@@ -2645,10 +2645,6 @@ h3 {
   border: none;
 }
 
-.modal_input[type="number"]:not(:placeholder-shown) ~ .btn_regulator svg {
-  outline: none;
-}
-
 .input_number::-webkit-outer-spin-button,
 .input_number::-webkit-inner-spin-button {
   appearance: none;
@@ -2698,18 +2694,24 @@ h3 {
   fill: rgb(0, 0, 0, 1);
 }
 
-.btn_number:focus-within .icon_less {
+.minus-btn:focus .icon_less{
   outline: 2px solid #AF4FFF;
-  border-radius: 50%;
+  border-radius: 100%;
 }
 
-.btn_number:focus-within .icon_more {
+.plus-btn:focus .icon_more{
   outline: 2px solid #AF4FFF;
-  border-radius: 50%;
+  border-radius: 100%;
 }
 
 .btn_regulator:active svg {
   fill: rgb(0, 0, 0, 0.1);
+}
+
+.modal_input[type="number"]:invalid {
+  outline: 3px solid #FF3D3D;
+  outline-offset: -4px;
+  background: transparent;
 }
 
 .plus-btn {
