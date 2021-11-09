@@ -5,7 +5,8 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Каталог</title>
-      <link rel="stylesheet" href="css\main.css">
+      <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+      <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
     <header class="header header_catalog">
@@ -15,14 +16,14 @@
       <nav class="header_nav">
         <div class="header_menu_full">
           <form action="#" method="get" class="header_form">
+            <span class="visually_hidden">Поиск по сайту</span>
             <label class="header_search" for="search">
               <svg class="icon_search" aria-hidden="true" focusable="false" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="m15.7 14.3-3.1-3.1C13.5 10 14 8.6 14 7c0-3.9-3.1-7-7-7S0 3.1 0 7s3.1 7 7 7c1.6 0 3-.5 4.2-1.4l3.1 3.1c.2.2.4.3.7.3.6 0 1-.4 1-1 0-.2-.1-.5-.3-.7ZM2 7c0-2.8 2.2-5 5-5s5 2.2 5 5-2.2 5-5 5-5-2.2-5-5Z" fill="#000"/>
               </svg>
-              <div class="visually_hidden">Поиск по сайту</div>
             </label>
-            <input class="header_input" type="text" name="search" placeholder="Поиск по сайту">
-            <button class="btn_search">Найти</button>
+            <input class="header_input" id="search" type="text" name="search" placeholder="Поиск по сайту">
+            <button class="btn_search" type="submit">Найти</button>
           </form>
           <ul class="header_nav_list header_menu_user">
             <li class="user_item user_name">
@@ -58,7 +59,7 @@
           </ul>
         </div>
         <ul class=" header_nav_list header_menu">
-          <li class="menu_item item_catalog">
+          <li class="item_catalog">
             <a href="#catalog" class="link link_catalog">Каталог товаров</a>
             <div class="icon_catalog">
               <svg class="icon_plus" aria-hidden="true" focusable="false" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -87,9 +88,9 @@
               </div>
             </div>
           </li>
-          <li class="menu_item item_delivery"><a href="#delivery" class="link menu_link link_outline">Доставка</a></li>
-          <li class="menu_item item_guarantee"><a href="#insurance" class="link menu_link link_outline">Гарантия</a></li>
-          <li class="menu_item item_contacts"><a href="#contacts" class="link menu_link link_outline">Контакты</a></li>
+          <li class="item_delivery"><a href="#delivery" class="link menu_link link_outline">Доставка</a></li>
+          <li class="item_guarantee"><a href="#insurance" class="link menu_link link_outline">Гарантия</a></li>
+          <li class="item_contacts"><a href="#contacts" class="link menu_link link_outline">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -98,7 +99,7 @@
       <div class="page-container">
         <section class="inner_way">
           <h1 class="visually_hidden">Товары</h1>
-          <h2 class="inner_way_title">Моноподы для селфи</h1>
+          <h2 class="subtitle inner_way_title">Моноподы для селфи</h2>
           <ul class="inner_way_list">
             <li class="inner_way_item"><a href="#" class="inner_way_link">Главная</a></li>
             <li class="inner_way_item"><a href="#" class="inner_way_link">Каталог товаров</a></li>
@@ -109,9 +110,9 @@
         <div class="catalog_products_container">
           <div class="catalog_left_column">
             <aside class="catalog_products">
-              <h2 class="visually_hidden">Список товаров с фильтрами</h2>
+              <h2 class="subtitle visually_hidden">Фильтр товаров</h2>
               <div class="product_span">
-                <span class="product_label label_span" for="sorting">Фильтр:</span>
+                <span class="product_label label_span">Фильтр:</span>
               </div>
               <form class="catalog_filter" action="https://echo.htmlacademy.ru/" method="get">
                 <fieldset class="filter filter_price">
@@ -119,10 +120,10 @@
                   <div class="range">
                     <div class="range_scale">
                       <div class="range_bar" style="left: 0; width: 119px">
-                        <button class="range_toggle toggle_min" type="range">
+                        <button class="range_toggle toggle_min" type="button">
                           <span class="visually_hidden">Изменить минимальную цену</span>
                         </button>
-                        <button class="range_toggle toggle_max" type="range">
+                        <button class="range_toggle toggle_max" type="button">
                           <span class="visually_hidden">Изменить максималную цену</span>
                         </button>
                       </div>
@@ -205,6 +206,7 @@
 
           <div class="catalog_right_column">
             <section class="sorting_type">
+              <h2 class="subtitle visually_hidden">Список товаров с фильтрами</h2>
               <form action="sorting_list">
                 <div class="select">
                   <label class="product_label label_sorting" for="sorting">Сортировка:</label>
@@ -218,13 +220,13 @@
                 </div>
               </form>
               <div class="sorting_switch">
-                <button class="sorting_type_button sorting_type_up">
+                <button class="sorting_type_button sorting_type_up" type="button">
                   <span class="visually_hidden"> По возрастанию</span>
                   <svg class="icon_sorting_switch" width="11" height="10" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.5 0 11 10H0"/>
                   </svg>
                 </button>
-                <button class="sorting_type_button sorting_type_down active">
+                <button class="sorting_type_button sorting_type_down active" type="button">
                   <span class="visually_hidden">По убыванию</span>
                   <svg class="icon_sorting_switch" width="11" height="10" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.5 10 0 0h11"/>
@@ -321,8 +323,9 @@
 
     <footer class="main_footer">
       <div class="footer_container">
-        <h2 class="visually_hidden">Подвал сайта "Девайс"</h2>
+        <h2 class="subtitle visually_hidden">Подвал сайта "Девайс"</h2>
         <section class="footer_info">
+          <h3 class="info_subtitle visually_hidden">Адрес магазина</h3>
           <a href="https://htmlacademy.ru/" class="link_logo">
             <img class="footer_logo_img" src="img/footer_logo.png" width="145" height="36" alt="Логотип Интернет-магазина Девайс">
           </a>
@@ -330,6 +333,7 @@
         </section>
 
         <section class="footer_menu">
+          <h3 class="info_subtitle visually_hidden">Меню сайта и социальные сети</h3>
           <nav class="footer_nav">
             <ul class="footer_nav_list">
               <li class="footer_item">
@@ -349,7 +353,7 @@
               <h4 class="visually_hidden">Фейсбук</h4>
               <a class="footer_soc_link" href="https://www.facebook.com/htmlacademy">
                 <div class="soc_icon">
-                  <svg class="footer_icon" aria-hidden="true" focusable="false" width="9" height="18" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="footer_icon" aria-hidden="true" focusable="false" width="9" height="18" role="img" aria-label="Фейсбук" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.5 3H9V0H5.6C2.8 0 2 1.7 2 4.2V6H0v3h2v9h3V9h3.3l.6-3H5V4.5C5 3.7 5.3 3 6.5 3Z"/>
                   </svg>
                 </div>
@@ -359,7 +363,7 @@
               <h4 class="visually_hidden">Инстаграм</h4>
               <a class="footer_soc_link" href="https://www.instagram.com/htmlacademy/">
                 <div class="soc_icon">
-                  <svg class="footer_icon" aria-hidden="true" focusable="false" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="footer_icon" aria-hidden="true" focusable="false" width="16" height="16" role="img" aria-label="Инстаграм" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M14.7 1.3c-.9-.9-2-1.3-3.4-1.3H4.7C1.9 0 0 1.9 0 4.7v6.6c0 1.4.4 2.6 1.4 3.4.9.9 2 1.3 3.3 1.3h6.6c1.4 0 2.6-.4 3.4-1.3.8-.9 1.3-2 1.3-3.4V4.7c0-1.4-.4-2.6-1.3-3.4ZM8 12.1c-2.2 0-4.1-1.8-4.1-4.1S5.8 3.9 8 3.9c2.2 0 4.1 1.8 4.1 4.1s-1.9 4.1-4.1 4.1Zm4.6-7.4c-.7 0-1.3-.5-1.3-1.3s.5-1.3 1.3-1.3c.7 0 1.3.6 1.3 1.3 0 .7-.6 1.3-1.3 1.3Z"/>
                   </svg>
                 </div>
@@ -369,8 +373,8 @@
               <h4 class="visually_hidden">Твиттер</h4>
               <a class="footer_soc_link" href="https://twitter.com/htmlacademy_ru">
                 <div class="soc_icon">
-                  <svg class="footer_icon" aria-hidden="true" focusable="false" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#a)"><path d="M9.7.1c1.5-.5 2.6.3 3.2 1.1.5-.2 1.1-.4 1.7-.6 0 .8-.5 1.4-.8 1.6.7.2 1.2-.4 1.2-.4-.1.9-.9 1.7-1.4 1.9-.2 6.3-2.8 10.4-8.9 10.3h-.4C4 14 .6 13.6 0 12.2c2 .2 3.4-.4 4.1-1.1-.8-.3-2.4-.4-2.6-2.8.3.2.5.3 1.1.2C1.5 7.7.3 7 .4 5c.3.3.9.5 1.2.4C1 5.2-.2 2.3.8.8c1.6 1.7 3.3 3.4 6.3 3.5.2-2.1 1-3.5 2.6-4.2Z"/></g><defs><clipPath id="a"><path d="M0 0h15v14H0z"/></clipPath></defs>
+                  <svg class="footer_icon" aria-hidden="true" focusable="false" width="15" height="14" role="img" aria-label="Твиттер" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#a)"><path d="M9.7.1c1.5-.5 2.6.3 3.2 1.1.5-.2 1.1-.4 1.7-.6 0 .8-.5 1.4-.8 1.6.7.2 1.2-.4 1.2-.4-.1.9-.9 1.7-1.4 1.9-.2 6.3-2.8 10.4-8.9 10.3h-.4C4 14 .6 13.6 0 12.2c2 .2 3.4-.4 4.1-1.1-.8-.3-2.4-.4-2.6-2.8.3.2.5.3 1.1.2C1.5 7.7.3 7 .4 5c.3.3.9.5 1.2.4C1 5.2-.2 2.3.8.8c1.6 1.7 3.3 3.4 6.3 3.5.2-2.1 1-3.5 2.6-4.2Z"/></g><defs><clipPath><path d="M0 0h15v14H0z"/></clipPath></defs>
                   </svg>
                 </div>
               </a>
@@ -379,11 +383,12 @@
         </section>
 
         <section class="footer_contacts">
+          <h3 class="info_subtitle visually_hidden">Телефон для связи</h3>
           <address class="footer_address phone">
             <a href="tel:88128121212" class="footer_phone">Тел.: +7 (812) 812-12-12</a>
           </address>
-          <a href="https://htmlacademy.ru/" class="link_logo link_logo_footer">
-            <svg class="icon_html" aria-hidden="true" focusable="false" width="115" height="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 115 34" fill="#FFC700">
+          <a href="https://htmlacademy.ru/" class="link_logo_footer">
+            <svg class="icon_html" aria-hidden="true" focusable="false" width="115" height="34" role="img" aria-label="HTML Академия" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 115 34" fill="#FFC700">
               <path d="M0 12.9v2.6h2.5v-2.6H0ZM11.6 4.5c-1.6 0-2.8.7-3.6 1.7h-.1V0h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2V9.4c.1-3-1.8-4.9-4.5-4.9ZM26.6 4.8h-4.8V1.1h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V6.8h4.8v-2ZM41.1 4.6c-1.6 0-2.9.8-3.5 2.1h-.1c-.6-1.2-1.8-2.1-3.4-2.1-1.4 0-2.5.8-3.1 1.8h-.1V4.8H29v10.6h2V10c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2V9.8c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2V8.9c.1-2.5-1.4-4.3-3.9-4.3ZM47.8 12.7c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V0h-2v12.7ZM28.9 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6ZM44.2 22c-.5-2.4-2.6-4.1-5.4-4.1a5.4 5.4 0 0 0-5.6 5.6c0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1a3.4 3.4 0 0 1-3.3 2.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6c1.6 0 2.8 1 3.3 2.2h2.1V22ZM55.1 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6ZM68.7 19.8c-.9-1.1-2.2-1.9-3.9-1.9-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.4h-2v6.4Zm-3.6 7.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6ZM78.3 17.9c-3.3 0-5.5 2.5-5.5 5.6 0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5c.3-1.5 1.5-2.6 3.2-2.6ZM98.2 17.9c-1.6 0-2.9.8-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4ZM109.4 27l-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z"/>
             </svg>
           </a>
