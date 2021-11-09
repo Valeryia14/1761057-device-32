@@ -299,13 +299,17 @@ img {
   position: absolute;
   top: -1px;
   z-index: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 100%;
 }
 
 .basket_span {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 21px;
+  min-width: 21px;
   height: 21px;
   line-height: 16px;
   background: rgb(255, 255, 255);
@@ -504,9 +508,7 @@ img {
 .header_menu {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   width: 1065px;
-  margin: 0;
 }
 
 .item_catalog {
@@ -518,10 +520,11 @@ img {
 
 .link_catalog {
   margin-right: 17px;
-  display: flex;
-  align-items: center;
   text-transform: uppercase;
+  text-align: start;
   letter-spacing: 0.2em;
+  max-width: 450px;
+  padding-top: 14px;
 }
 
 .link_catalog:hover + .icon_catalog {
@@ -541,7 +544,7 @@ img {
 .link_catalog:focus-visible {
   outline: 2px solid #af4fff;
   border-radius: 25px;
-  padding: 0 15px;
+  padding: 14px 15px;
   margin-left: -15px;
   margin-right: 22px;
 }
@@ -573,7 +576,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 46px;
+  min-width: 46px;
   height: 46px;
   border: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 50%;
@@ -587,7 +590,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 46px;
+  min-width: 46px;
   height: 46px;
   border: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 50%;
@@ -601,6 +604,7 @@ img {
 
 .submenu {
   display: flex;
+  flex-wrap: wrap;
   position: absolute;
   margin-top: 53px;
   left: 0;
@@ -617,6 +621,7 @@ img {
   min-width: 200px;
   line-height: 18px;
   margin-right: 16px;
+  margin-bottom: 15px;
 }
 
 .submit_watch {
@@ -631,6 +636,8 @@ img {
   font-family: inherit;
   font-size: 16px;
   color: #000000;
+  display: block;
+  width: fit-content;
   margin: 0;
   text-decoration: none;
   padding: 0 15px 0 15px;
@@ -833,7 +840,7 @@ img {
   line-height: 21px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  background: linear-gradient(to bottom, transparent 0 7px, #ffe17f 7px 15px, transparent 15px 20px);
+  background: linear-gradient(to bottom, transparent 0 35%, #ffe17f 35% 75%, transparent 75% 100%);
 }
 
 .all_link:hover {
@@ -843,7 +850,7 @@ img {
 }
 
 .all_link:focus {
-  background: linear-gradient(to bottom, transparent 0 7px, #af4fff 7px 15px, transparent 15px 20px);
+  background: linear-gradient(to bottom, transparent 0 35%, #af4fff 35% 75%, transparent 75% 100%);
   box-shadow: 0 -9px 0 0 #ffffff,
     0 11px 0 0 #ffffff;
 }
@@ -1143,6 +1150,7 @@ img {
 .service_title {
   padding-top: 71px;
   margin-bottom: 34px;
+  word-break: break-word;
 }
 
 .service_text {
@@ -1200,7 +1208,7 @@ img {
   justify-content: center;
   align-items: center;
   background: #ffe17f;
-  width: 125px;
+  min-width: 125px;
   height: 100px;
   margin-right: 50px;
 }
@@ -1223,7 +1231,7 @@ img {
   background-color: rgb(220, 220, 220, 0.5);
   border-radius: 50%;
   opacity: 0.5;
-  width: 40px;
+  min-width: 40px;
   height: 40px;
   margin: 0 33px 0 48px;
 }
@@ -1459,6 +1467,7 @@ img {
   margin: 0;
   padding: 0;
   padding-left: 36px;
+  max-width: 230px;
 }
 
 .sign_action_text::before {
@@ -2097,7 +2106,7 @@ img {
   width: 200px;
   margin-bottom: 10px;
   letter-spacing: 0.2em;
-  background: linear-gradient(to bottom, transparent 0 8px, #ffc700 8px 16px, transparent 16px 20px);
+  background: linear-gradient(to bottom, transparent 0 35%, #ffc700 35% 70%, transparent 70% 100%);
   cursor: pointer;
 }
 
@@ -2109,7 +2118,7 @@ img {
 
 .filter_button:focus {
   outline: none;
-  background: linear-gradient(to bottom, transparent 0 8px, #af4fff 8px 16px, transparent 16px 20px);
+  background: linear-gradient(to bottom, transparent 0 40%, #af4fff 40% 80%, transparent 80% 100%);
   box-shadow: 0 -9px 0 0 transparent,
     0 11px 0 0 transparent;
 }
@@ -2164,10 +2173,10 @@ img {
   width: 100%;
   text-align: left;
   border: none;
-  padding: 4px 33px 7px 5px;
+  padding: 4px 33px 7px 3px;
   appearance: none;
   outline: none;
-  background: transparent url("../img/select_arrow.svg") no-repeat right 24px center;
+  background: transparent url("../img/select_arrow.svg") no-repeat right 21px center;
 }
 
 .select_control:hover {
@@ -2239,12 +2248,15 @@ img {
   line-height: 21px;
   padding-right: 2px;
   padding-left: 10px;
+  max-width: 85px;
+  word-wrap: break-word;
 }
 
 .product_new {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 360px;
   position: absolute;
   top: 27px;
   right: 27px;
@@ -2289,7 +2301,7 @@ img {
 
 .product_card:hover .product_card_button {
   display: block;
-  background: linear-gradient(to bottom, transparent 0 7px, #ffe17f 7px 15px, transparent 15px 20px);
+  background: linear-gradient(to bottom, transparent 0 35%, #ffe17f 35% 75%, transparent 75% 100%);
   box-shadow: none;
 }
 
@@ -2747,7 +2759,7 @@ img {
   min-width: 200px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  background: linear-gradient(to bottom, transparent 0 7px, #ffc700 7px 15px, transparent 15px 20px);
+  background: linear-gradient(to bottom, transparent 0 35%, #ffc700 35% 75%, transparent 75% 100%);
   cursor: pointer;
 }
 
@@ -2759,7 +2771,7 @@ img {
 
 .modal_btn:focus {
   outline: none;
-  background: linear-gradient(to bottom, transparent 0 7px, #af4fff 7px 15px, transparent 15px 20px);
+  background: linear-gradient(to bottom, transparent 0 35%, #af4fff 35% 75%, transparent 75% 100%);
   box-shadow: 0 -9px 0 0 transparent,
     0 11px 0 0 transparent;
 }
